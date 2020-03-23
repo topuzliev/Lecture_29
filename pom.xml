@@ -19,6 +19,7 @@
     <plugins>
       <plugin>
         <!-- Build an executable JAR -->
+		
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.0.2</version>
@@ -32,6 +33,13 @@
           </archive>
         </configuration>
       </plugin>
+	  <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.1</version>
+            <configuration>
+                <useSystemClassLoader>false</useSystemClassLoader>
+            </configuration>
+        </plugin>
     </plugins>
   </build>
 </project>
